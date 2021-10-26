@@ -1,0 +1,30 @@
+{
+    "name": "my-links-server",
+    "version": "1.0.0",
+    "description": "Server for My Links project.",
+    "main": "server.js",
+    "repository": "https://github.com/harrsh2124/my-links-server.git",
+    "author": "Harsh Patel <dev@harrsh.com>",
+    "license": "MIT",
+    "private": false,
+    "scripts": {
+        "start": "node server.js",
+        "dev:start": "nodemon",
+        "format": "prettier --write \"**/*.+(js|jsx|json|yml|yaml|css|md)\""
+    },
+    "devDependencies": {
+        "nodemon": "^2.0.14",
+        "prettier": "^2.4.1"
+    },
+    "dependencies": {
+        "cors": "^2.8.5",
+        "dotenv": "^10.0.0",
+        "express": "^4.17.1",
+        "express-jwt": "^6.1.0",
+        "jsonwebtoken": "^8.5.1",
+        "mongoose": "^6.0.12",
+        "morgan": "^1.10.0",
+        "uuid": "^8.3.2",
+        "winston": "^3.3.3"
+    }
+}
