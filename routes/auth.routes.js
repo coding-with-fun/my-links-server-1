@@ -1,8 +1,11 @@
 const express = require("express");
 const UserSignIn = require("../controllers/auth/SignIn");
+const UserSignUp = require("../controllers/auth/SignUp");
+const { validateSignUp, validateSignIn } = require("../middleware/checkReq");
 
 const AuthRoute = express.Router();
 
-AuthRoute.post("/signin", UserSignIn);
+AuthRoute.post("/signin", validateSignIn, UserSignIn);
+AuthRoute.post("/signup", validateSignUp, UserSignUp);
 
 module.exports = AuthRoute;
